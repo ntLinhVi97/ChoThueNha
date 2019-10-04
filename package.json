@@ -1,0 +1,22 @@
+{
+  "name": "webbanxecu",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "eslint": "^5.16.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "mongodb": "^3.2.4",
+    "mongoose": "^5.5.7",
+    "morgan": "~1.9.0",
+    "uuid": "3.3.2",
+    "body-parser": "1.19.0"
+  }
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Thuê nhà TVV</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./stylesheets/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div id="signInSection">
+			<div class="row">
+				<div class="col-3">
+				</div>
+				<div class="col-6">
+					<h1 class="companyName">Hệ thống quản lí thuê nhà VV</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+				</div>
+				<div class="col-6">
+					<h1 class="welcome">Xin chào!</h1>
+				</div>
+			</div>
+			<!--login-->
+			<!-- -->
+			<div class="clearfix"> </div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Load Login -->
+						<div class="panel panel-default">
+							<div class="panel-body1">
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-2" id="login">
+										<h5 class="lableLogin">Tên đăng nhập: </h5>
+									</div>
+									<div class="col-md-3">
+										<input id="userName" class="form-control" type="text" />
+									</div>
+								</div>
+								<!-- ---- -->
+								<div class="row">
+									<div class="col-md-3"></div>
+									<div class="col-md-2" id="login">
+										<h5 class="lableLogin">Mật khẩu: </h5>
+									</div>
+									<div class="col-md-3">
+										<input id="password" class="form-control" type="password" />
+									</div>
+								</div>
+								<!-- ---- -->
+								<div class="row">
+									<div class="col-md-5"></div>
+									<div class="col-md-3" id="loginButton">
+										<button type="button" onclick="login()" class="btn btn-info"
+											id="loginButton1">Đăng nhập</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- -->
+			<div class="row">
+				<div class="col-md-2"><img src="./img/nha.jpg"></div>
+			</div>
+		</div>
+
+		<!-- Admin -->
+		<div class="clearfix"> </div>
+
+		<div class="container" id="adminPage">
+			<!-- nav -->
+			<div class="row">
+				<div class="col-md-3" id="navForAdminPage">
+					<div class="btn-group-vertical" id="btnGroup">
+						<button type="button" onclick="" class="btn btn-info" id="changePass"><b>Đổi mật khẩu</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="changePassActive"><b>Đổi mật khẩu</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="createAcc"><b>Tạo tài khoản</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="createAccActive"><b>Tạo tài khoản</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="createBranch"><b>Tạo thông tin chi nhánh</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="createBranchActive"><b>Tạo thông tin chi nhánh</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="editBranch"><b>Sửa thông tin chi nhánh</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="editBranchActive"><b>Sửa thông tin chi nhánh</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="editEmployee"><b>Sửa thông tin admin/nhân viên</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="editEmployeeActive"><b>Sửa thông tin admin/nhân viên</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="createKindsOfHouse"><b>Tạo loại nhà</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="createKindsOfHouseActive"><b>Tạo loại nhà</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="editKindsOfHouse"><b>Sửa thông tin loại nhà</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="editKindsOfHouseActive"><b>Sửa thông tin loại nhà</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="deleteAcc"><b>Xóa tài khoản</b></button>
+						<button type="button" onclick="" class="btn btn-info" id="deleteAccActive"><b>Xóa tài khoản</b></button>
+					</div>
+					<img id="imgManager" src="img/nav_nha.jpg">
+				</div>
+				<!--Change pass-->
+				<div class="col-md-8" id="changePassComponent">
+					<div class="row">
+						<div class="col-md-5"></div>
+						<div class="col-md-7">
+							<h1 class="header">Đổi mật khẩu</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<!--  -->
+							<div class="panel panel-default" id="login">
+								<div class="panel-body1">
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-4">
+											<h5 class="lableLogin">Mật khẩu cũ: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="oldPassChangePass" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-4">
+											<h5 class="lableLogin">Mật khẩu mới: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="newPassChangePass" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!----><div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-4">
+											<h5 class="lableLogin">Nhập lại mật khẩu: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="confirmPassChangePass" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!-- --- -->
+									<div class="row">
+										<div class="col-md-6"></div>
+										<div class="col-md-6" id="actionSession">
+											<button type="button" class="btn btn-info"
+												id="cancelbtnChangePass">Hủy</button>
+											<button type="button" onclick="changePassWord()" class="btn btn-info"
+												id="changePassWord">Đồng
+												ý</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--Create acc-->
+				<div class="col-md-8" id="createAccComponent">
+					<div class="row">
+						<div class="col-md-5"></div>
+						<div class="col-md-7">
+							<h1 class="header">Tạo tài khoản</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<!--  -->
+							<div class="panel panel-default" id="login">
+								<div class="panel-body1">
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Tên đăng nhập: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="userNameCreateAcc" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Mã nhân viên: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="employmentIDCreateAcc" class="form-control" type="text" value="" readonly/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Bộ phận: </h5>
+										</div>
+										<div class="col-md-6">
+											<select class="form-control" id="departmentCreateAcc">
+												<option>Admin</option>
+												<option>Nhân viên</option>
+											</select>
+										</div>
+									</div>
+									<!-- --- -->
+									<div class="row">
+										<div class="col-md-5"></div>
+										<div class="col-md-6" id="actionSession">
+											<button type="button" class="btn btn-info"
+												id="cancelbtnCreateAcc">Hủy</button>
+											<button type="button" onclick="createAccount()" class="btn btn-info"
+												id="createAccount">Đồng
+												ý</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--Create branch -->
+				<div class="col-md-8" id="createBrachComponent">
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-9">
+							<h1 class="header">Tạo thông tin chi nhánh</h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<!--  -->
+							<div class="panel panel-default" id="login">
+								<div class="panel-body1">
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Đường: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="streetCreateBranch" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Quận: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="districCreateBranch" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Khu vực: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="areaCreateBranch" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Thành phố: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="cityCreateBranch" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Điện thoại: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="phoneCreateBranch" class="form-control" type="number" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-2"></div>
+										<div class="col-md-3">
+											<h5 class="lableLogin">Fax: </h5>
+										</div>
+										<div class="col-md-6">
+											<input id="faxCreateBranch" class="form-control" type="text" value=""/>
+										</div>
+									</div>
+									<!---->
+									<div class="row">
+										<div class="col-md-5"></div>
+										<div class="col-md-6" id="actionSession">
+											<button type="button" class="btn btn-info"
+												id="cancelbtnCreateBranch">Hủy</button>
+											<button type="button" onclick="createBranchOffice()" class="btn btn-info"
+												id="createBranchOffice">Đồng
+												ý</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-1">
+					<button type="button" class="btn logoutbtn">
+						<img src="./img/logoutbtn.png">
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="./business.js"></script>
+	</div>
+</body>
+
+</html>
